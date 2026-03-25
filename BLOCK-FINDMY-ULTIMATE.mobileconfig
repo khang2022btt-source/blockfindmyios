@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <!-- 🔒 DNS CHẶN TOÀN BỘ -->
+        <dict>
+            <key>DNSSettings</key>
+            <dict>
+                <key>DNSProtocol</key>
+                <string>HTTPS</string>
+                <key>ServerURL</key>
+                <string>https://dns.adguard.com/dns-query</string>
+                <key>SupplementalMatchDomains</key>
+                <array>
+                    <string>icloud.com</string>
+                    <string>*.icloud.com</string>
+                    <string>fmip.icloud.com</string>
+                    <string>findmy.icloud.com</string>
+                    <string>gateway.icloud.com</string>
+                    <string>p01-fmip.icloud.com</string>
+                    <string>p02-fmip.icloud.com</string>
+                    <string>p03-fmip.icloud.com</string>
+                    <string>p04-fmip.icloud.com</string>
+                    <string>mask.icloud.com</string>
+                    <string>gsp-ssl.ls.apple.com</string>
+                </array>
+            </dict>
+            <key>PayloadType</key>
+            <string>com.apple.dnsSettings.managed</string>
+            <key>PayloadIdentifier</key>
+            <string>ultimate.dns.block</string>
+            <key>PayloadUUID</key>
+            <string>DNS-ULTIMATE-1111</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+
+        <!-- 🔕 TẮT THÔNG BÁO FIND MY -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.notificationsettings</string>
+            <key>PayloadIdentifier</key>
+            <string>ultimate.notifications.block</string>
+            <key>PayloadUUID</key>
+            <string>NOTI-ULTIMATE-2222</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>NotificationSettings</key>
+            <array>
+                <dict>
+                    <key>BundleIdentifier</key>
+                    <string>com.apple.findmy</string>
+                    <key>NotificationsEnabled</key>
+                    <false/>
+                </dict>
+            </array>
+        </dict>
+
+        <!-- 🔐 KHÓA TÀI KHOẢN -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.applicationaccess</string>
+            <key>allowAccountModification</key>
+            <false/>
+            <key>allowVPNCreation</key>
+            <false/>
+            <key>allowEraseContentAndSettings</key>
+            <false/>
+            <key>PayloadIdentifier</key>
+            <string>ultimate.restrictions</string>
+            <key>PayloadUUID</key>
+            <string>RESTRICT-ULTIMATE-3333</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+
+        <!-- 📵 HẠN CHẾ DỮ LIỆU DI ĐỘNG -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.cellular</string>
+            <key>PayloadIdentifier</key>
+            <string>ultimate.cellular.block</string>
+            <key>PayloadUUID</key>
+            <string>CELL-ULTIMATE-4444</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>CellularDataEnabled</key>
+            <false/>
+        </dict>
+    </array>
+
+    <key>PayloadDisplayName</key>
+    <string>🔥 BLOCK FIND MY ULTIMATE</string>
+    <key>PayloadIdentifier</key>
+    <string>ultimate.block.findmy</string>
+
+    <!-- ❌ KHÔNG CHO GỠ -->
+    <key>PayloadRemovalDisallowed</key>
+    <true/>
+
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>ROOT-ULTIMATE-9999</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
